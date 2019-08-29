@@ -1,0 +1,73 @@
+{% extends '../layout.njk' %}
+
+{% block content %}
+
+    <h4>Account Information</h4>
+    <hr>
+
+    <form method="POST" action="/account/profile">
+      <div class="row">
+        <label for="email" class="col-md-3">Email</label>
+        <input type="email" class="col" name="email" id="email" value="{{user.email}}">
+      </div>
+
+      <div class="row">
+        <label for="name" class="col-md-2">Name</label>
+        <input type="text" name="name" id="name" value="{{user.profile.name}}">
+      </div>
+
+      <div class="row">
+        <label for="location">Location</label>
+        <input type="text" name="location" id="location" value="{{ user.profile.location }}">
+      </div>
+      
+      <div class="row">
+        <label for="website">Website</label>
+        <input type="text" class="col" name="website" id="website" value="{{ user.profile.website }}">
+      </div>
+
+      <div class="row">
+        <label for="website">Account Number</label>
+        <input disabled type="text" value="{{ user.user_id }}">
+      </div>
+      <br>
+          <button type="submit" class="btn">Update Profile</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<hr>
+  <h4>Change Password</h4>
+  <form method="POST" action="/account/password">
+    <div class="row">
+      <label for="password" >New Password</label>
+      <input type="password"  name="password" id="password">
+    </div>
+    <div class="row">
+      <label for="confirm" >Confirm Password</label>
+      <input type="password" name="confirm" id="confirm">
+    </div>
+    <br>
+    <div class="row p0">
+        <div>
+          <button type="submit" class="btn">Change Password</button>
+        </div>
+      </div>
+  </form>
+</div>
+
+<hr>
+
+  <h4>Delete Account</h4>
+  <form method="POST" action="/account/delete">
+    <p>You can delete your account, but keep in mind this action is irreversible.</p>
+    <button type="submit btn btn-danger" disabled>Delete my account</button>
+  </form>
+  </div>
+</div>
+
+
+</div>
+</div>
+{% endblock %}

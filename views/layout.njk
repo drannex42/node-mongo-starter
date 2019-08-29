@@ -1,0 +1,15 @@
+<html>
+  <head>
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+<body>
+ 
+    {% include 'partials/header.njk' %}
+    {% include 'partials/flash.njk' %}
+    {% block content %}{% endblock %}
+
+    {% block footer %}{% endblock %}
+</body>

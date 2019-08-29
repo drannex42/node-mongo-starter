@@ -1,0 +1,18 @@
+{% extends '../layout.njk' %}
+
+{% block content %}
+
+  <h3>Register</h3>
+  <hr>
+
+  <form method='POST'>
+    <input type='hidden' name='_csrf' value={{_csrf}}>
+    <input type='email' name='email' id='email' placeholder='Email' autofocus autocomplete='email' required>
+    <input type='password' name='password' id='password' placeholder='Password' autocomplete='new-password' required>
+    <input type='password' name='confirmPassword' id='confirmPassword' placeholder='Confirm Password' autocomplete='new-password' required>
+    <button type='submit'>
+      | Signup
+      </button>
+  </form>
+
+{% endblock %}

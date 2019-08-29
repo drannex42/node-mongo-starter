@@ -1,0 +1,27 @@
+
+
+  {% if messages.errors %}
+    {% for error in messages.errors %}
+    <div class="notification-item error">
+      <p>{{error.msg}}</p>
+    </div>
+    {% endfor %}
+  {% endif %}
+
+
+  {% if messages.success %}
+    {% for success in messages.success %}
+    <div class="notification-item success">
+      <p>{{success.msg}}</p>
+      </div>
+    {% endfor %}
+  {% endif %}
+
+  {% if messages.info %}
+    {% for info in messages.info %}
+    <div class="notification-item info">
+      <p>{{info.msg}}</p>
+      </div>
+    {% endfor %}
+  {% endif %}
+</div>

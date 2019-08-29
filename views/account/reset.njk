@@ -1,0 +1,24 @@
+{% extends '../layout.njk' %}
+
+{% block content %}
+
+  <h3>Reset Password</h3>
+  <hr>
+
+<form method="POST">
+  <input type="hidden" name="_csrf"  value={{_csrf}}/>
+  <div>
+    <label for="password">New Password</label>
+      <input type="password" name="password" id="password" placeholder="New password" autofocus="autofocus" autocomplete="new-password" required="required"/>
+  </div>
+  <div>
+    <label for="confirm">Confirm Password</label>
+    <input class="form-control" type="password" name="confirm" id="confirm" placeholder="Confirm password" autocomplete="new-password" required="required"/>
+  </div>
+  <div>
+    <button type="submit"><i class="far fa-keyboard fa-sm"></i>Change Password</button>
+  </div>
+</form>
+
+
+{% endblock %}

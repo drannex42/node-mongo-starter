@@ -1,0 +1,22 @@
+{% extends '../layout.njk' %}
+
+{% block content %}
+
+  <h3>Forgot Password</h3>
+  <hr>
+<form method="POST">
+  <input type="hidden" name="_csrf"/>
+  <p>Enter your email address below and we will send you password reset instructions.</p>
+  <div class="form-group ">
+    <label for="email">Email</label>
+    <div>
+      <input class="form-control" type="email" name="email" id="email" placeholder="Email" autofocus="autofocus" autocomplete="email" required="required"/>
+    </div>
+  </div>
+  <div>
+    <button type="submit">Reset Password</button>
+  </div>
+</form>
+
+
+{% endblock %}
