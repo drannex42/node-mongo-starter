@@ -3,7 +3,7 @@ const crypto = require('crypto');
 const nodemailer = require('nodemailer');
 const passport = require('passport');
 const User = require('../models/User');
-const Pub = require('../models/Pub');
+const Post = require('../models/Post');
 
 const randomBytesAsync = promisify(crypto.randomBytes);
 
