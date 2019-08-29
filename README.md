@@ -14,7 +14,7 @@ I created this about five years ago based off of sahat/hackathon-starter after a
  
 This very simple repo includes a fully crafted authentication suite using passport, with account management features. 
  
-We use the [Nunjucks by Mozilla](https://mozilla.github.io/nunjucks/templating.html) (better thantemplating engine (port based on Jinga2).
+We use the [Nunjucks by Mozilla](https://mozilla.github.io/nunjucks/templating.html) (better than Jade/Pug) templating engine that is a port based on Jinga2.
  
 This repo will be rarely updated as it is incredibly minimal and easy to understand. This has very little opinions built in and is a quick start to developing platforms of your own. 
 
